@@ -1,0 +1,160 @@
+.details-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+  text-shadow: 0 1px 2px black;
+}
+
+.details {
+  height: 100vh;
+
+
+  ::ng-deep mwl-gauge {
+    width: 150px;
+    height: 150px;
+    display: block;
+    padding: 10px;
+
+    .dial {
+      stroke-width: 10;
+
+      @media (max-width: 576px) {
+        stroke-width: 8;
+      }
+    }
+
+    .value {
+      stroke-dasharray: none;
+      stroke-width: 13;
+
+      @media (max-width: 576px) {
+        stroke-width: 10;
+      }
+    }
+
+    .value-text {
+      fill: snow;
+      font-size: 24px;
+      font-weight: 700;
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .game-gauge {
+    position: absolute;
+    top: 77px;
+    right: 0;
+
+
+    h4 {
+      position: relative;
+      bottom: 60px;
+      color: white;
+      font-size: 18px;
+
+      @media (max-width: 576px) {
+        font-size: 16px;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  .game {
+    &-banner {
+      height: 442px;
+      overflow: hidden;
+
+
+      &-img {
+        width: 100%;
+        filter: brightness(80%) blur(5px);
+      }
+    }
+
+    &-content {
+      text-align: center;
+      position: relative;
+      top: -220px;
+
+      @media (max-width: 768px) {
+        top: -350px;
+      }
+
+      @media (max-width: 576px) {
+        top: -450px;
+        text-align: left;
+      }
+    }
+
+    &-header {
+      color: snow;
+
+      &-title {
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 70px;
+        white-space: nowrap;
+
+        @media (max-width: 1200px) {
+          font-size: 60px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 40px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 30px;
+          white-space: normal;
+          text-align: center;
+        }
+      }
+
+      &-release-date {
+        font-size: 24px;
+
+        @media (max-width: 786px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+          margin-left: 20px;
+        }
+      }
+
+      &-genres {
+        font-size: 22px;
+
+        @media (max-width: 786px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 16px;
+          margin-left: 20px;
+        }
+      }
+
+      &-label {
+        font-size: 18px;
+        color: white;
+
+        @media (max-width: 786px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 14px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

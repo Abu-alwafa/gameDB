@@ -1,0 +1,32 @@
+<ng-container *ngIf="game$ | async as _game">
+  <div *ngIf="_game; else nullTemp" class="details">
+    <div class="game-banner">
+      <img src="{{_game.background_image}}" class="game-banner-img">
+    </div>
+    <div class="game-content">
+      <div class="details-wrapper">
+        <div class="game-header">
+          <h1 class="game-header-title">{{_game.name}}</h1>
+          <h2 class="game-header-release-date">Released : {{_game.released}}</h2>
+          <p class="game-header-genres">
+            <span *ngFor="let genre of _game.genres; let last = last">{{genre.name}}<span *ngIf="!last">, </span></span>
+          </p>
+          <a href="{{_game.metacritic_url}}" target="_blank" class="game-header-label">Metacritic</a>
+          <div class="game-gauge">
+            <mwl-gauge class="two" [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]="gameRating"
+              [animated]="true" [animationDuration]="2" [color]="getColor">
+            </mwl-gauge>
+            <h4>Rating</h4>
+          </div>
+        </div>
+      </div>
+      <app-game-tabs [game]="game"></app-game-tabs>
+    </div>
+
+  </div>
+
+  <ng-template #nullTemp>
+    <h2>There is no such a game</h2>
+  </ng-template>
+
+</ng-container>
