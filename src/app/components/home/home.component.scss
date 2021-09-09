@@ -45,7 +45,7 @@
 }
 
 .game {
-  width: 320px;
+  width: 277px;
   // height: 37;
   margin: 10px;
   overflow: hidden;
@@ -55,8 +55,7 @@
   transition: 0.2s;
 
   @media (max-width: 576px) {
-    width: 80%;
-    height: 60%;
+    width: 75%;
   }
 
   &:hover {
