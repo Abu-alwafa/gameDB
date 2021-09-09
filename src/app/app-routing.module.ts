@@ -4,6 +4,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'gameDB', component: HomeComponent },
   { path: 'gameDB/search/:game-search', component: HomeComponent },
   { path: 'gameDB/details/:id', component: DetailsComponent },
