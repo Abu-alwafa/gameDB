@@ -73,6 +73,7 @@
 
       &-img {
         width: 100%;
+        // max-height: 400px;
         filter: brightness(80%) blur(5px);
       }
     }
@@ -94,10 +95,18 @@
 
     &-header {
       color: snow;
-
+      position: relative;
+      top: -50px;
+      left: 0;
+      @media (max-width: 576px){
+        top: 0;
+      }
       &-title {
         font-size: 70px;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 70px;
         white-space: nowrap;
 
