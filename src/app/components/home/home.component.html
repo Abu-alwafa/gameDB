@@ -23,7 +23,7 @@
         <p class="game-name">{{game.name}}</p>
         <div class="game-paltforms">
           <img *ngFor="let gamePlatform of game.parent_platforms"
-            src="../../../assets/images/platforms/{{gamePlatform.platform.slug}}.png"
+            src="assets/images/platforms/{{gamePlatform.platform.slug}}.png"
             alt="{{gamePlatform.platform.slug}}" class="game-platform">
         </div>
       </div>
