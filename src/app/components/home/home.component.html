@@ -1,7 +1,7 @@
 <div class="filter">
   <mat-form-field>
     <mat-label>Sort</mat-label>
-    <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchGames(sort)">
+    <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchGames()">
       <mat-option value="name">Name</mat-option>
       <mat-option value="-released">Released</mat-option>
       <mat-option value="-added">Added</mat-option>
@@ -9,6 +9,12 @@
       <mat-option value="-updated">Updated</mat-option>
       <mat-option value="-rating">Rating</mat-option>
       <mat-option value="metacritic">Metacritic</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Device Filter</mat-label>
+    <mat-select panelClass="sort-select" [(ngModel)]="platform" (selectionChange)="setPlatform()">
+      <mat-option *ngFor="let item of httpService.platforms$ | async" value="{{item.id}}">{{item.name}}</mat-option>
     </mat-select>
   </mat-form-field>
 </div>
@@ -23,10 +29,22 @@
         <p class="game-name">{{game.name}}</p>
         <div class="game-paltforms">
           <img *ngFor="let gamePlatform of game.parent_platforms"
-            src="assets/images/platforms/{{gamePlatform.platform.slug}}.png"
-            alt="{{gamePlatform.platform.slug}}" class="game-platform">
+            src="assets/images/platforms/{{gamePlatform.platform.slug}}.png" alt="{{gamePlatform.platform.slug}}"
+            class="game-platform">
         </div>
       </div>
     </div>
   </ng-container>
+
+
+  <div class="btn-container">
+    <button mat-icon-button *ngIf="canGoPrev" (click)="setPage(pagesBtns[0])">
+      Prev
+    </button>
+    <button mat-icon-button [class.active]="p == page" *ngFor="let p of pagesBtns" (click)="setPage(p)">{{p}}</button>
+
+    <button mat-icon-button *ngIf="canGoNext" (click)="setPage(pagesBtns[pagesBtns.length - 1])">
+      Next
+    </button>
+  </div>
 </div>
