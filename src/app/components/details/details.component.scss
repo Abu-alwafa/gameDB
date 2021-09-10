@@ -45,9 +45,6 @@
   }
 
   .game-gauge {
-    // position: absolute;
-    // top     : 77px;
-    // right   : 20%;
     display        : flex;
     flex-direction : column;
     justify-content: center;
@@ -55,8 +52,8 @@
 
     @media (max-width: 576px) {
       position: relative;
-      top     : -50px;
-      right   : -160px;
+      top     : -75px;
+      right   : -120px;
     }
 
     h4 {
@@ -86,21 +83,17 @@
 
 
       &-img {
-        width        : 100%;
-        // max-height: 400px;
-        filter       : brightness(60%) blur(3px);
+        width : 100%;
+        filter: brightness(60%) blur(3px);
       }
     }
 
     &-content {
       text-align: center;
       position  : relative;
-      top       : -220px;
+      top       : -200px;
       background: rgba(0, 0, 0, 0.5);
 
-      // @media (max-width: 768px) {
-      //   top: -350px;
-      // }
 
       @media (max-width: 576px) {
         text-align: left;
@@ -125,7 +118,8 @@
         white-space: nowrap;
 
         @media (max-width: 768px) {
-          font-size: 40px;
+          font-size  : 40px;
+          line-height: normal;
         }
 
         @media (max-width: 576px) {

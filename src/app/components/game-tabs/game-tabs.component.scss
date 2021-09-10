@@ -1,13 +1,10 @@
 .game {
   &-tabs {
-    width        : 100%;
-    margin       : -95px auto;
-    background   : #151515;
-    text-align   : left;
-    color        : rgba(255, 255, 255, 0.8);
-    // border: 1px solid snow;
-    // box-shadow: 0 0 10px snow;
-
+    width     : 100%;
+    margin    : -120px auto;
+    background: #151515;
+    text-align: left;
+    color     : rgba(255, 255, 255, 0.8);
 
     &-par {
       padding      : 20px 20px 0 20px;
