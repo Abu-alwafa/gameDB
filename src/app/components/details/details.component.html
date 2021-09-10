@@ -11,7 +11,6 @@
           <p class="game-header-genres">
             <span *ngFor="let genre of _game.genres; let last = last">{{genre.name}}<span *ngIf="!last">, </span></span>
           </p>
-
           <div class="game-gauge">
             <mwl-gauge class="two" [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]="gameRating"
               [animated]="true" [animationDuration]="2" [color]="getColor">

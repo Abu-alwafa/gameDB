@@ -1,10 +1,14 @@
 .game {
   &-tabs {
     width     : 100%;
-    margin    : -120px auto;
+    margin    : -100px auto;
     background: #151515;
     text-align: left;
     color     : rgba(255, 255, 255, 0.8);
+
+    @media (max-width: 576px) {
+      margin: -140px auto;
+    }
 
     &-par {
       padding      : 20px 20px 0 20px;

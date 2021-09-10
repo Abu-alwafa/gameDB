@@ -1,5 +1,5 @@
 .details-wrapper {
-  max-width     : 900px;
+  width         : 100%;
   margin        : auto;
   position      : relative;
   // text-shadow: 0 1px 2px black;
@@ -45,15 +45,17 @@
   }
 
   .game-gauge {
+
     display        : flex;
     flex-direction : column;
     justify-content: center;
     align-items    : center;
 
     @media (max-width: 576px) {
+      width   : 150px;
       position: relative;
-      top     : -75px;
-      right   : -120px;
+      top     : -109px;
+      right   : -210px;
     }
 
     h4 {
@@ -81,17 +83,21 @@
       max-height: 442px;
       overflow  : hidden;
 
+      @media (max-width: 576px) {
+        min-height: 250px;
+      }
 
       &-img {
         width : 100%;
-        filter: brightness(60%) blur(3px);
+        height: 100%;
+        filter: brightness(75%) blur(3px);
       }
     }
 
     &-content {
       text-align: center;
       position  : relative;
-      top       : -200px;
+      top       : -220px;
       background: rgba(0, 0, 0, 0.5);
 
 
@@ -118,13 +124,13 @@
         white-space: nowrap;
 
         @media (max-width: 768px) {
-          font-size  : 40px;
+          font-size  : 35px;
           line-height: normal;
         }
 
         @media (max-width: 576px) {
-          font-size  : 30px;
-          white-space: normal;
+          font-size  : 26px;
+          line-height: normal;
           text-align : left;
           margin-left: 20px;
         }
