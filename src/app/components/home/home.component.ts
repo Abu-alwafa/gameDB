@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   canGoNext = false;
   canGoPrev = false;
-  noOfPages = 8;
+  noOfPages = 5;
   searchGames(): void {
     if (this.gameSub) this.gameSub.unsubscribe();
     this.gameSub = this.httpService.getGameList(this.query).subscribe((res) => {
