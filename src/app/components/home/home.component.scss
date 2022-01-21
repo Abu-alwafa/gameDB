@@ -1,5 +1,5 @@
 .container {
-  padding: 16px;
+  padding: 20px;
 }
 
 .filter {
@@ -11,6 +11,10 @@
 
   mat-form-field {
     margin-right: 16px;
+
+    @media (max-width: 430px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -61,8 +65,8 @@
 
 .game {
   width           : 277px;
-  height          : 300px;
-  margin          : 10px;
+  height          : 350px;
+  margin          : 32px auto;
   overflow        : hidden;
   background-color: rgb(6, 6, 6);
   border-radius   : 5px;
@@ -70,7 +74,7 @@
   transition      : 0.3s ease;
 
   @media (max-width: 576px) {
-    width: 75%;
+    width: 90%;
   }
 
   &:hover {
@@ -102,12 +106,8 @@
   }
 
   &-description {
-    padding        : 30px;
-    display        : flex;
-    flex-direction : column;
-    justify-content: flex-end;
-    // height: 50%;
-    text-align     : center;
+    padding   : 30px;
+    text-align: center;
   }
 
   &-name {
